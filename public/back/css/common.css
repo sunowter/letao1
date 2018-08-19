@@ -115,6 +115,13 @@ a:visited {
   margin-left: 20px;
   background-color: #fff;
 }
+.container-fluid .index-right .r-main .table.table-bordered.table-hover th {
+  text-align: center;
+}
+.container-fluid .index-right .r-main .table.table-bordered.table-hover tbody tr th,
+.container-fluid .index-right .r-main .table.table-bordered.table-hover tbody tr td {
+  vertical-align: middle;
+}
 .container-fluid.hiddenmenu {
   padding-left: 0;
 }

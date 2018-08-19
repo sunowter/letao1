@@ -40,12 +40,34 @@
        <a href="" class="pull-right icon-logout"><i class="glyphicon glyphicon-log-out "></i></a>
       </div>
       <div class="r-main">
-   
-    
           <ol class="breadcrumb">
               <li><a href="#">管理系统</a></li>
               <li class="active">首页</li>
           </ol>
+          <!-- //表格部分 -->
+          <table class="table table-bordered table-hover text-center" id='usertable'>
+            <thead >
+              <tr>
+                <th>序号</th>
+                <th>用户名</th>
+                <th>手机号</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>问问</td>
+                <td>15250952298</td>
+                <td>正常</td>
+                <td>
+                    <button class="btn btn-danger">禁用</button>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
               
   
 
@@ -80,6 +102,6 @@
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/login.js"></script>
+<script src="./js/user.js"></script>
 </html>
 
