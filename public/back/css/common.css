@@ -116,10 +116,11 @@ a:visited {
 .container-fluid .index-right .r-top.hiddenmenu {
   padding-left: 0;
 }
+.container-fluid .index-right .r-main {
+  padding-left: 20px;
+}
 .container-fluid .index-right .r-main .breadcrumb {
   margin-top: 20px;
-  margin-left: 20px;
-  background-color: #fff;
 }
 .container-fluid .index-right .r-main .table.table-bordered.table-hover th {
   text-align: center;
@@ -138,4 +139,10 @@ a:visited {
 #main1 {
   width: 48%;
   height: 400px;
+}
+.pr-20 {
+  padding-right: 20px;
+}
+#fileupload {
+  display: none;
 }

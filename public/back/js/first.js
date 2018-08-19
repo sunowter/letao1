@@ -24,7 +24,7 @@ function render(){
           //添加分页
           $('#first-paginator').bootstrapPaginator({
             bootstrapMajorVersion:3,
-            currentPage:1,//初始化，当前页显示第一页
+            currentPage:info.page,//初始化，当前页显示第一页
             totalPages:Math.ceil(info.total/info.size),
             onPageClicked:function(a,b,c,page){//点击分页执行的函数
               // 渲染指定页

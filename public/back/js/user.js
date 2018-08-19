@@ -28,7 +28,7 @@
           // 3、初始化
         $('#userpagination').bootstrapPaginator({
           bootstrapMajorVersion:3,
-          currentPage:1,//当前页
+          currentPage:info.page,//当前页
           totalPages:Math.ceil(info.total/info.size),//总页数
           onPageClicked:function(a,b,c,page){
             //点击分页按钮执行的函数
