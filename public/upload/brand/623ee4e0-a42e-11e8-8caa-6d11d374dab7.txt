@@ -1,0 +1,9 @@
+INSERT INTO `user` VALUES ('', 'jepson', 'lueSGJZetyySpUndWjMBEg==', '151022266677', '0');
+INSERT INTO `user` VALUES ('', 'peter', 'lueSGJZetyySpUndWjMBEg==', '15101166677', '1');
+INSERT INTO `user` VALUES ('', 'amy', 'lueSGJZetyySpUndWjMBEg==', '17102366677', '0');
+INSERT INTO `user` VALUES ('', 'pig', 'lueSGJZetyySpUndWjMBEg==', '19102366677', '1');
+INSERT INTO `user` VALUES ('', 'dog', 'lueSGJZetyySpUndWjMBEg==', '15102366677', '0');
+INSERT INTO `user` VALUES ('', 'cat', 'lueSGJZetyySpUndWjMBEg==', '15102366677', '1');
+INSERT INTO `user` VALUES ('', 'tom', 'lueSGJZetyySpUndWjMBEg==', '15102366677', '1');
+INSERT INTO `user` VALUES ('', 'jery', 'lueSGJZetyySpUndWjMBEg==', '15102366677', '0');
+
