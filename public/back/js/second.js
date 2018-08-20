@@ -47,7 +47,7 @@ $('#add-cates').click(function(){
       },
       dataType:'json',
       success:function(info){
-       console.log(info)
+      //  console.log(info)
       var htmlStr=template('secondtpl1',info)
       $('#secondlul').html(htmlStr)
       // 给ul注册点击事件
@@ -64,7 +64,13 @@ $('#secondlul').on('click','a',function(e){
   e.preventDefault()
      var text= $(this).text()
      $('#seachcate').text(text)
-     console.log(text)
+    //  console.log(text)
+    //点击a时，将a的id赋值给隐藏域
+    var id =$(this).data('id')
+    $("[name='categoryId']").val(id)
+    // 表单校验成功，改变状态
+$('#secondform').data('bootstrapValidator').updateStatus('categoryId','VALID')
+    
     })
 
 $("#fileupload").fileupload({
@@ -75,12 +81,89 @@ $("#fileupload").fileupload({
     var imageurl=data.result.picAddr
     // console.log(imageurl)
     $("#imagefile").attr('src',imageurl)
+    $("[name='brandLogo']").val(imageurl)//存储图片的地址
+    //图片存储成功后更改状态
+    $('#secondform').data('bootstrapValidator').updateStatus('brandLogo','VALID')
 
   }
 });
 
 
+// //使用隐藏域提交表单信息
+// 1、存储一级分类的id
+// 2、存储图片的地址
 
+
+//添加表单校验
+$('#secondform').bootstrapValidator({
+      excluded: [],
+      feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+      },
+
+     fields: {
+        categoryId:{
+          validators:{
+            notEmpty: {
+              message: '请选择一级分类'
+            }
+          },
+        },
+        brandName:{
+          validators:{
+            notEmpty: {
+              message: '请输入二级分类'
+            }
+          },
+        },
+        brandLogo:{
+          validators:{
+            notEmpty: {
+              message: '请上传图片'
+          
+            }
+          },
+        }
+    
+      }
+}) 
+
+
+
+//检验成功后注册成功点击事件，阻止默认提交，发送ajax请求
+// 模态框隐藏
+// 页面渲染
+$('#addSubmit').click(function(e){
+  e.preventDefault();
+   $.ajax({
+     type:'post',
+     url:'/category/addSecondCategory',
+     data:$('#secondform').serialize(),
+     dataType:'json',
+     success:function(info){
+      if(info.success){
+        $('#second-modal').modal('hide');
+           currentPage=1;
+           render()
+
+      }
+     }
+   })
+
+})
+
+
+
+
+// 重置表单
+// 重置按钮文本
+// 重置图片途径为默认
+
+
+
+//
 
 
 })
