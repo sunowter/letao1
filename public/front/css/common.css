@@ -1,0 +1,126 @@
+html,
+body {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  display: block;
+  height: 100% ;
+  width: 100%;
+}
+.lt-container {
+  max-width: 640px;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  overflow: hidden;
+  /*头部样式*/
+  /*底部样式*/
+  /*主体区域*/
+}
+.lt-container .header {
+  height: 45px;
+  background-color: #006699;
+  padding: 0 45px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.lt-container .header .left,
+.lt-container .header .right {
+  display: block;
+  height: 45px;
+  width: 45px;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+}
+.lt-container .header .right {
+  top: 0;
+  right: 0;
+  left: auto;
+}
+.lt-container .header .center {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 20px;
+}
+.lt-container .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 55px;
+  background-color: #006699;
+  width: 100%;
+}
+.lt-container .footer ul li {
+  float: left;
+  width: 25%;
+}
+.lt-container .footer ul li a {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 8px;
+  color: #fff;
+}
+.lt-container .footer ul li a p {
+  margin: 0;
+  color: #fff;
+}
+.lt-container .footer ul li a.current {
+  color: #f61;
+}
+.lt-container .footer ul li a.current p {
+  color: #f61;
+}
+.lt-container .main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.lt-container .main .nav ul {
+  padding: 10px;
+}
+.lt-container .main .nav ul li {
+  float: left;
+  width: 33.3%;
+}
+.lt-container .main .product ul {
+  padding: 10px;
+}
+.lt-container .main .product ul li {
+  float: left;
+  padding: 10px;
+  width: 48%;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.lt-container .main .product ul li .price {
+  color: red;
+}
+.lt-container .main .product ul li .oldPrice {
+  text-decoration: line-through;
+}
+.lt-container .main .product ul li:nth-child(odd) {
+  margin-right: 4%;
+}
