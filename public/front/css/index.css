@@ -1,0 +1,33 @@
+.main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.main .nav ul {
+  padding: 10px;
+}
+.main .nav ul li {
+  float: left;
+  width: 33.3%;
+}
+.main .product ul {
+  padding: 10px;
+}
+.main .product ul li {
+  float: left;
+  padding: 10px;
+  width: 48%;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.main .product ul li .price {
+  color: red;
+}
+.main .product ul li .oldPrice {
+  text-decoration: line-through;
+}
+.main .product ul li:nth-child(odd) {
+  margin-right: 4%;
+}

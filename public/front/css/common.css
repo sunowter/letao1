@@ -96,31 +96,3 @@ img {
   width: 100%;
   position: relative;
 }
-.lt-container .main .nav ul {
-  padding: 10px;
-}
-.lt-container .main .nav ul li {
-  float: left;
-  width: 33.3%;
-}
-.lt-container .main .product ul {
-  padding: 10px;
-}
-.lt-container .main .product ul li {
-  float: left;
-  padding: 10px;
-  width: 48%;
-  border: 1px solid #ccc;
-  text-align: center;
-  background-color: #fff;
-  margin-bottom: 10px;
-}
-.lt-container .main .product ul li .price {
-  color: red;
-}
-.lt-container .main .product ul li .oldPrice {
-  text-decoration: line-through;
-}
-.lt-container .main .product ul li:nth-child(odd) {
-  margin-right: 4%;
-}
