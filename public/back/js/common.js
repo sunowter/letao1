@@ -63,7 +63,7 @@ $.ajax({
   url:'/employee/checkRootLogin',
   dataType:'json',
   success:function(info){
-    console.log(info)
+    // console.log(info)
    if(info.success){
      //允许访问，什么都不做
    }

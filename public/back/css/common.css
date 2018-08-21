@@ -146,3 +146,6 @@ a:visited {
 #fileupload {
   display: none;
 }
+.imageBox img {
+  width: 100px;
+}

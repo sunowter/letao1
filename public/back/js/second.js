@@ -93,7 +93,6 @@ $(function(){
   // 1、存储一级分类的id
   // 2、存储图片的地址
   
-  
   //添加表单校验
   $('#secondform').bootstrapValidator({
         excluded: [],
@@ -103,7 +102,7 @@ $(function(){
           validating: 'glyphicon glyphicon-refresh'
         },
   
-       fields: {
+       fields:{
           categoryId:{
             validators:{
               notEmpty: {
@@ -127,15 +126,17 @@ $(function(){
             },
           }
       
-        }
+      }
+        
   }) 
   
-  
+
   
   //检验成功后注册成功点击事件，阻止默认提交，发送ajax请求
   // 模态框隐藏
   // 页面渲染
-  $('#addSubmit').click(function(e){
+  $('#secondform').on('success.form.bv',function(e){
+
     e.preventDefault();
      $.ajax({
        type:'post',
@@ -143,27 +144,33 @@ $(function(){
        data:$('#secondform').serialize(),
        dataType:'json',
        success:function(info){
+    
         if(info.success){
           $('#second-modal').modal('hide');
              currentPage=1;
              render()
+                
+                // 重置表单
+                // 重置按钮文本
+                // 重置图片途径为默认
+            $('#secondform').data('bootstrapValidator').resetForm(true)
+            //手动重置按钮即图片
+            $('#seachcate').text('请选择一级分类')
+            $('#imagefile').attr('src','./images/none.png')
   
         }
        }
      })
+  })
   
   })
   
   
   
-  
-  // 重置表单
-  // 重置按钮文本
-  // 重置图片途径为默认
   
   
   
   //
   
   
-  })
+
