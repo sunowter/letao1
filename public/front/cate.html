@@ -33,36 +33,14 @@
             <div class="mui-scroll">
              <!--这里放置真实显示的DOM内容-->
              <ul>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#" class="current">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
-              <li><a href="#">运动馆</a></li>
+               <script type='text/html' id='leftTpl'>
+                {{each rows v i}}
+            
+                <li><a href="#"  class="{{i===0? 'current':''}}" data-index='{{i+1}}'>{{v.categoryName}}</a></li>
+          
+                {{/each}}
+              </script>
+              
              </ul>
             
           
@@ -75,6 +53,16 @@
                 <div class="mui-scroll">
                  <!--这里放置真实显示的DOM内容-->
                 <ul>
+                  <script type="text/html" id='rightTpl'>
+                    {{if rows.length===0}}
+                    <p>没有更多信息了</p>
+                    {{else}}
+                    {{each rows v i}}
+                    <li><a href="#"><img src="{{v.brandLogo}}" alt=""><p>{{v.brandName}}</p></a></li>
+                    {{/each}}
+                    {{/if}}
+                    </script>
+                  <!-- <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li>
                   <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li>
                   <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li>
                   <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li>
@@ -95,9 +83,7 @@
                   <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li>
                   <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li>
                   <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li>
-                  <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li>
-                  <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li>
-                  <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li>
+                  <li><a href="#"><img src="./images/brand1.png" alt=""><p>耐克</p></a></li> -->
                 </ul>
                 
               
@@ -126,7 +112,8 @@
   </div>
   <script src="./lib/zepto/zepto.min.js"></script>
   <script src="./lib/mui/js/mui.js"></script>
+  <script src='./lib/artTemplate/template-web.js'></script>
   <script src="./js/common.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/cate.js"></script>
 </body>
 </html>
