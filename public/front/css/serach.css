@@ -1,0 +1,45 @@
+.main {
+  background-color: #fff;
+}
+.main .search {
+  padding-right: 36px;
+  position: relative;
+  padding: 10px;
+}
+.main .search .search-input {
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+  font-size: 14px;
+  border: 1px solid  #007AFF;
+}
+.main .search .search-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 5px 5px 0;
+}
+.main .history {
+  padding: 10px;
+  font-size: 14px;
+  color: #666;
+}
+.main .history ul {
+  margin-top: 10px;
+  border: 1px dashed red;
+}
+.main .history ul li {
+  border-bottom: 1px dashed red;
+  padding-left: 10px;
+}
+.main .history ul li a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+}
+.main .history ul li .mui-icon-closeempty {
+  margin-top: 3px;
+}
+.main .history ul li:last-child {
+  border-bottom: none;
+}
