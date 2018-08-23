@@ -5,7 +5,7 @@
       // var jsonStr = JSON.stringify( arr );
       // localStorage.setItem( "search_list", jsonStr )
 
-      render()
+  render()
   function getHis(){
     var his=localStorage.getItem('search_list')//得到的是json字符串
     //arr为空时，返回的结果是null，此时赋值给空数组
@@ -32,14 +32,10 @@
     if(e.index==1){
       localStorage.removeItem('search_list')
       render()
-   
-
-
     }
     })
     
   })
-
 
 //功能3删除单条历史记录
 $('.history').on('click','.del-btn',function(){
@@ -57,8 +53,6 @@ $('.history').on('click','.del-btn',function(){
 
 })
 
-
-
 //功能4、点击搜索按钮添加历史记录
 // 获取input框的值，追到到本地数据的数组的最前面
 // 1、判断有没有重复，重复的话删除重复项
@@ -68,7 +62,7 @@ $('.history').on('click','.del-btn',function(){
     // console.log(key)
     //非空校验
     if(key===""){
-      alert('请输入关键字')
+      mui.toast('请输入关键字',{ duration:'2000' }) 
       return
     }
     var arr =getHis()//获取本地数组
@@ -89,8 +83,8 @@ $('.history').on('click','.del-btn',function(){
       render()
       // 重置表单
       $('.search-input').val("")
-      //跳转到商品列表页
-      location.href='productList.html'
+      //跳转到商品列表页,将搜索框的值拼接到地址栏中
+      location.href='productList.html?key='+key
   })
 
 

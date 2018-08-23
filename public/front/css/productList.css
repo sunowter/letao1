@@ -1,0 +1,36 @@
+.nav ul li {
+  float: left;
+  height: 30px;
+  font-size: 12px;
+  width: 25%;
+  text-align: center;
+  background-color: #EEEEEE;
+  line-height: 30px;
+}
+.nav ul li a {
+  color: #666;
+}
+.nav ul li a.current {
+  color: orange;
+}
+.nav ul li span {
+  margin-left: 3px;
+}
+.mui-ellipsis-2 {
+  height: 40px;
+}
+.upload {
+  height: 60px;
+  width: 60px;
+  border: 3px solid #3C8DBC;
+  margin: 200px auto;
+  animation: zhuan 2s linear infinite;
+}
+@keyframes zhuan {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

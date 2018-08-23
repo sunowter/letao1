@@ -96,3 +96,24 @@ img {
   width: 100%;
   position: relative;
 }
+.product ul {
+  padding: 10px;
+}
+.product ul li {
+  float: left;
+  padding: 10px;
+  width: 48%;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.product ul li .price {
+  color: red;
+}
+.product ul li .oldPrice {
+  text-decoration: line-through;
+}
+.product ul li:nth-child(odd) {
+  margin-right: 4%;
+}

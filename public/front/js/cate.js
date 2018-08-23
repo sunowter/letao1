@@ -19,23 +19,27 @@ $(function(){
     var index =$(this).data('index')
     // 当前高亮，其他移除高亮
     $(this).addClass('current').parent().siblings().find('a').removeClass('current')
+    render()
     // console.log(id)
-    $.ajax({
-      type:'get',
-      url:'/category/querySecondCategory',
-      data:{
-        id:index
-      },
-      success:function(info){
-        
-        console.log(info)
-        var htmlStr=template('rightTpl',info)
-        $('.right ul').html(htmlStr)
-      }
-  
-  
-  
-    })
+    function render(){
+      $.ajax({
+        type:'get',
+        url:'/category/querySecondCategory',
+        data:{
+          id:index
+        },
+        success:function(info){
+          
+          console.log(info)
+          var htmlStr=template('rightTpl',info)
+          $('.right ul').html(htmlStr)
+        }
+    
+    
+    
+      })
+
+    }
   
    })
 
