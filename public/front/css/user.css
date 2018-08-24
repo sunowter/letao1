@@ -1,0 +1,8 @@
+.btn-logout {
+  padding: 10px;
+  height: 60px;
+}
+.btn-logout button {
+  width: 100%;
+  height: 40px;
+}

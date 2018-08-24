@@ -1,5 +1,6 @@
 // 一进入页面，发送ajax请求渲染页面
 var id=getSearch('productID')
+// console.log(id)
 $.ajax({
   type:'get',
   url:'/product/queryProductDetail',
@@ -37,17 +38,18 @@ $('.main').on('click','.size span',function(){
     return;
    }
   //  console.log(size)
+  console.log(id)
   $.ajax({
     type:'post',
     url:'/cart/addCart',
     data:{
-       id:id,
+      productId:id,
        num:num,
        size:size,
     },
     dataType:'json',
     success:function(info){
-      //  console.log(info)
+       console.log(info)
       if(info.error===400){
         //用户未登陆，跳转到登陆页
         
