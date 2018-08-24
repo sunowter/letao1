@@ -48,8 +48,8 @@
             <ul>
                 {{each data v i}}
              <li>
-                 <a href="">
-                   <img src="{{v.pic[0].picAddr}}" alt="">
+                 <a href="productinfo.html?productID={{v.id}}" data-id={{v.id}}>
+                   <img src="{{v.pic[0].picAddr}}" alt="" >
                    <p class="mui-ellipsis-2">{{v.proName}}</p>
                    <p><span class="price">￥{{v.price}}</span><span class="oldPrice">￥{{v.oldPrice}}</span></p>
                    <button class="mui-btn mui-btn-primary">立即购买</button>

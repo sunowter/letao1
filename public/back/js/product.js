@@ -268,9 +268,9 @@ $(function(){
   $('#productform').on('success.form.bv',function(e){
     e.preventDefault()
     var data=$('#productform').serialize()
-    data+='$picName1='+picArr[0].picName+'&picAddr1'+picArr[0].picAddr
-    data+='$picName2='+picArr[1].picName+'&picAddr2'+picArr[1].picAddr
-    data+='$picName3='+picArr[2].picName+'&picAddr3'+picArr[2].picAddr
+    data+='&picName1='+picArr[0].picName+'&picAddr1='+picArr[0].picAddr
+    data+='&picName2='+picArr[1].picName+'&picAddr2='+picArr[1].picAddr
+    data+='&picName3='+picArr[2].picName+'&picAddr3='+picArr[2].picAddr
     console.log(data)
     $('#product-modal').modal('hide')
     $.ajax({

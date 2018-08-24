@@ -142,6 +142,9 @@ $('a[data-type]').on('tap',function(e){
   //调用一下下拉加载
   mui('.mui-scroll-wrapper').pullRefresh().pulldownLoading();
 
-
-
+})
+//给商品列表祖册点击事件点击跳转到商品详情页
+$('.product').on('tap','a',function(){
+  var id=$(this).data('id')
+  location.href='productinfo.html?productID='+id
 })
